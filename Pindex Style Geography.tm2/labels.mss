@@ -38,14 +38,13 @@
   text-transform: uppercase;
   text-wrap-width: 100;
   text-wrap-before: true;
-  text-fill: #555;
+  text-fill: #334;
   text-halo-fill: fadeout(#fff,80%);
   text-halo-radius: 2;
   text-halo-rasterizer: fast;
   text-line-spacing: -4;
   text-character-spacing: 0.5;
   text-size: 10;
-  text-margin: 5; // Decrease density slightly
   [zoom>=3][scalerank=1],
   [zoom>=4][scalerank=2],
   [zoom>=5][scalerank=3],
@@ -73,7 +72,7 @@
 #marine_label {
   text-name: @name;
   text-face-name: @sans_it;
-  text-wrap-width: 100;
+  text-wrap-width: 60;
   text-wrap-before: true;
   text-fill: darken(@water, 10);
   text-halo-fill: fadeout(#fff, 75%);
@@ -123,7 +122,7 @@
     [zoom=7] { shield-size: 14; }
     shield-face-name: @sans;
     shield-placement: point;
-    shield-fill: #555;
+    shield-fill: #333;
     shield-halo-fill: fadeout(#fff, 50%);
     shield-halo-radius: 1;
     shield-halo-rasterizer: fast;
@@ -141,18 +140,15 @@
 #place_label[zoom>=8][localrank<=3] {
   text-name: @name;
   text-face-name: @sans;
-  text-margin: 6;
   text-wrap-width: 120;
   text-wrap-before: true;
-  text-fill: #777;
+  text-fill: #333;
   text-halo-fill: fadeout(#fff, 50%);
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-size: 10;
   [type='city'][zoom>=8][zoom<=15] {
-  	text-face-name: @sans_bd;
-    text-character-spacing: 0.5;
-    text-transform: uppercase;
+  	text-face-name: @sans_md;
     text-size: 16;
     [zoom>=10] { 
       text-size: 18;
@@ -182,7 +178,7 @@
   [type='hamlet'],
   [type='suburb'],
   [type='neighbourhood'] {
-    text-fill: #777;
+    text-fill: #633;
     text-face-name:	@sans_bd;
     text-transform: uppercase;
     text-character-spacing: 0.5;
@@ -209,14 +205,14 @@
     // can use that in our url expression.
     // Not all POIs have a Maki icon assigned, so we limit this section
     // to those that do. See also <https://www.mapbox.com/maki/>
-    marker-fill:#888;
+    marker-fill:#666;
     marker-file:url('icon/[maki]-12.svg');
   }
   ::label {
     text-name: @name;
     text-face-name: @sans_md;
     text-size: 12;
-    text-fill: #888;
+    text-fill: #666;
     text-halo-fill: fadeout(#fff, 50%);
     text-halo-radius: 1;
     text-halo-rasterizer: fast;
@@ -233,7 +229,6 @@
 // ---------------------------------------------------------------------
 // Roads
 
-/* Hide road shields for now for readability
 #road_label[reflen>=1][reflen<=6]::shield {
   // Motorways with a 'ref' tag that is 1-6 characters long have a
   // [ref] value for shield-style labels.
@@ -241,7 +236,7 @@
   // in _src folder
   shield-name: [ref];
   shield-face-name: @sans_bd;
-  shield-fill: #777;
+  shield-fill: #765;
   shield-min-distance: 60;
   shield-min-padding: 8;  // prevents clipped shields at tile edges
   shield-size: 9;
@@ -250,19 +245,18 @@
     shield-size: 11;
     shield-file: url('shield/motorway_lg_[reflen].png');
   }
-} */
+}
 
 #road_label {
   text-name: @name;
   text-placement: line;  // text follows line path
   text-face-name: @sans;
-  text-fill: #999;
+  text-fill: #765;
   text-halo-fill: fadeout(#fff, 50%);
   text-halo-radius: 1;
   text-halo-rasterizer: fast;
   text-size: 12;
   text-avoid-edges: true;  // prevents clipped labels at tile edges
-  text-margin: 6; // prevent street labels from being too dense
   [zoom>=15] { text-size: 13; }
 }
 

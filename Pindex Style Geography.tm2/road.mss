@@ -1,6 +1,6 @@
 // Basic color palette, from which variations will be derived.
-@motorway:          #fff;
-@main:              #fff;
+@motorway:          #fc8;
+@main:              #fea;
 @street:            #fff;
 @street_limited:    #f3f3f3;
 
@@ -21,7 +21,8 @@
   ::case[zoom>=13]['mapnik::geometry_type'=2] {
     [class='motorway'] {
       line-join:round;
-      line-color: mix(@motorway, #555, 75);
+      line-color: mix(@motorway, #800, 75);
+      line-opacity: 0.7;
       #road { line-cap: round; }
       #tunnel { line-dasharray:3,2; }
       [zoom>=6]  { line-width:0.4; }
@@ -35,7 +36,7 @@
     }
     [class='motorway_link'][zoom>=13] {
       line-join:round;
-      line-color: mix(@motorway, #555, 75);
+      line-color: mix(@motorway, #800, 75);
       #road { line-cap: round; }
       #tunnel { line-dasharray:3,2; }
       [zoom>=13] { line-width:1; }
@@ -45,8 +46,8 @@
     }
     [class='main'] {
       line-join:round;
-      line-color: mix(@main, #555, 75);
-      line-opacity: 0.8;
+      line-color: mix(@main, #800, 75);
+      line-opacity: 0.7;
       #road { line-cap: round; }
       #tunnel { line-dasharray:3,2; }
       [zoom>=6] { line-width:0.2; }
@@ -80,7 +81,6 @@
     [class='path'][zoom>=15] {
       line-color: #cba;
       line-dasharray: 2,1;
-      line-opacity: 0.5;
       [zoom>=16] { line-width: 1.2; }
       [zoom>=17] { line-width: 1.5; }
     }

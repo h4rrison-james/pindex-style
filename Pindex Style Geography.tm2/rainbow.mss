@@ -10,8 +10,8 @@
 @pink: #f3c1d3;
 
 // Tint Bands
-#countries-natural-earth::tint-bands[zoom<=6], 
-#states-natural-earth::tint-bands[zoom>3][zoom<=6]
+#countries-natural-earth::tint-bands[zoom<=10], 
+#states-natural-earth::tint-bands[zoom>4][zoom<=10]
 {
   opacity: 0.2;
   line-join: round;
@@ -27,12 +27,12 @@
   [zoom>6] { line-width: 5; }
   
   // Turn off for countries when states are displayed
-  [ADM0_A3='USA'][zoom>3] { line-width: 0; }
-  [ADM0_A3='AUS'][zoom>3] { line-width: 0; }
+  [ADM0_A3='USA'][zoom>4] { line-width: 0; }
+  [ADM0_A3='AUS'][zoom>4] { line-width: 0; }
 }
 
-#countries-natural-earth::inner[zoom>=0][zoom<=6],
-#states-natural-earth::inner[zoom>3][zoom<=6]
+#countries-natural-earth::inner[zoom>=0][zoom<=10],
+#states-natural-earth::inner[zoom>4][zoom<=10]
 { 
   line-color:@line;
   line-opacity:0.8;
@@ -44,11 +44,11 @@
   [zoom>2] { line-width:2.4; }
   
   // Turn off for countries when states are displayed
-  [ADM0_A3='USA'][zoom>3] { line-width: 0; }
-  [ADM0_A3='AUS'][zoom>3] { line-width: 0; }
+  [ADM0_A3='USA'][zoom>4] { line-width: 0; }
+  [ADM0_A3='AUS'][zoom>4] { line-width: 0; }
 }
 
-#states-natural-earth::fill[zoom>3][zoom<=6] {
+#states-natural-earth::fill[zoom>4][zoom<=10] {
   polygon-comp-op: hard-light;
   // Australia
   [adm1_code='AUS-2651'] { polygon-fill: @red; }
@@ -112,7 +112,7 @@
   [adm1_code='USA-3517'] { polygon-fill: @red; } //Hawaii
 }
 
-#countries-natural-earth::fill[zoom<=6] {
+#countries-natural-earth::fill[zoom<=10] {
   polygon-comp-op: hard-light;
   [ADM0_A3='ABW'] { polygon-fill:@purple; }
   [ADM0_A3='AFG'] { polygon-fill:@red; }
@@ -129,7 +129,7 @@
   [ADM0_A3='ATC'] { polygon-fill:@purple; }
   [ADM0_A3='ATF'] { polygon-fill:@yellow; }
   [ADM0_A3='ATG'] { polygon-fill:@pink; }
-  [ADM0_A3='AUS'][zoom<4] {
+  [ADM0_A3='AUS'][zoom<5] {
     // Set no fill when displaying states
     polygon-fill:@pink; 
   }
@@ -351,7 +351,7 @@
   [ADM0_A3='UKR'] { polygon-fill:@pink; }
   [ADM0_A3='UMI'] { polygon-fill:@yellow; }
   [ADM0_A3='URY'] { polygon-fill:@red; }
-  [ADM0_A3='USA'][zoom<4] { 
+  [ADM0_A3='USA'][zoom<5] { 
     polygon-fill:@yellow;
   }
   [ADM0_A3='USG'] { polygon-fill:@yellow; }
