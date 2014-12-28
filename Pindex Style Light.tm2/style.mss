@@ -2,10 +2,17 @@
 // Colours
 
 // Base
-@water: #717171;
-@land: #efefef;
+/* Light theme
+@water: #878787;
+@land: #f6f6f6;
 @line: #888;
 @building: #fff;
+*/
+
+@land: #363f50;
+@water: #12161b;
+@line: @water;
+@building: @water;
 
 // Land Use
 @park: #d5d6d5;
@@ -18,7 +25,7 @@
 
 #bounding-box::bottom {
   polygon-fill: @land;
-  comp-op: hard-light;
+  //comp-op: hard-light;
 }
 
 
