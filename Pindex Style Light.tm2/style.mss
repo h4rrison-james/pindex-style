@@ -2,23 +2,17 @@
 // Colours
 
 // Base
-/* Light theme
-@water: #878787;
-@land: #f6f6f6;
-@line: #888;
-@building: #fff;
-*/
-
-@land: #363f50;
-@water: #12161b;
-@line: @water;
-@building: @water;
+//@water: #ddeeff;
+@water: #0cbadf;
+@land: #fffee5;
+@line: #226688;
+@building: #fae364;
 
 // Land Use
-@park: #d5d6d5;
-@hospital: #fff;
-@school: #fff;
-@wood: #fff;
+@park: #aadb78;
+@hospital: #fde;
+@school: #f0e8f8;
+@wood: #6a4;
 
 // Testing
 @f00: #f00;
