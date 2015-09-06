@@ -1,25 +1,24 @@
 // ---------------------------------------------------------------------
 // Colours
 
-// Base
-//@water: #ddeeff;
-@water: #0cbadf;
-@land: #fffee5;
-@line: #226688;
-@building: #fae364;
+// Base Monochrome
+@water: #878787;
+@land: #f6f6f6;
+@line: #888;
+@building: #fff;
 
-// Land Use
-@park: #aadb78;
-@hospital: #fde;
-@school: #f0e8f8;
-@wood: #6a4;
+// Land Use Monochrome
+@park: #d5d6d5;
+@hospital: #fff;
+@school: #fff;
+@wood: #fff;
 
 // Testing
 @f00: #f00;
 
 #bounding-box::bottom {
   polygon-fill: @land;
-  //comp-op: hard-light;
+  comp-op: hard-light;
 }
 
 
