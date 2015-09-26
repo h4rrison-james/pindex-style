@@ -16,7 +16,7 @@
 // Testing
 @f00: #f00;
 
-#bounding-box::bottom {
+#10m-900913-bounding-box {
   polygon-fill: @land;
   comp-op: hard-light;
 }
