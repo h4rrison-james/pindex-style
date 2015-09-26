@@ -1,4 +1,5 @@
 _prefs: 
+  mapid: h4rrison.afcc11e2
   saveCenter: true
 _properties: 
   bridge: 
@@ -10,17 +11,17 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - -104.7656
-  - 39.7748
-  - 4
+  - 116.3672
+  - -28.9505
+  - 6
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
-maxzoom: 10
+maxzoom: 22
 minzoom: 3
 name: Pindex Style
-source: "mapbox:///h4rrison.2ad22f3b,mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
+source: "mapbox:///h4rrison.aa0364db,h4rrison.961cdfc3,mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
   - road.mss

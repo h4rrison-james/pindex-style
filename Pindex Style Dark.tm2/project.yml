@@ -10,17 +10,17 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 20.7422
-  - -4.1273
-  - 3
+  - 116.3892
+  - -28.0429
+  - 6
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
 maxzoom: 22
 minzoom: 2
-name: Pindex Style
-source: "mapbox:///h4rrison.2ad22f3b,mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
+name: Pindex Dark
+source: "mapbox:///h4rrison.aa0364db,mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
 styles: 
   - style.mss
   - road.mss

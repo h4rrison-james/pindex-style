@@ -11,16 +11,16 @@ bounds:
   - 180
   - 85.0511
 center: 
-  - 126.5625
-  - 44.2137
-  - 2
+  - 115.7368
+  - -31.9469
+  - 10
 description: ''
 format: "png8:m=h"
 interactivity_layer: ''
 layers: null
 maxzoom: 22
 minzoom: 2
-name: Pindex Style
+name: Pindex Monochrome
 source: "mapbox:///h4rrison.aa0364db,mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5"
 styles: 
   - style.mss

@@ -5,11 +5,11 @@
 <Parameters>
   <Parameter name="attribution"><![CDATA[<a href='https://www.mapbox.com/about/maps/' target='_blank'>&copy; Mapbox &copy; OpenStreetMap</a> <a class='mapbox-improve-map' href='https://www.mapbox.com/map-feedback/' target='_blank'>Improve this map</a>]]></Parameter>
   <Parameter name="bounds">-180,-85.0511,180,85.0511</Parameter>
-  <Parameter name="center">126.5625,44.2137,2</Parameter>
+  <Parameter name="center">115.7368,-31.9469,10</Parameter>
   <Parameter name="format">png8:m=h</Parameter>
   <Parameter name="maxzoom">22</Parameter>
   <Parameter name="minzoom">2</Parameter>
-  <Parameter name="name"><![CDATA[Pindex Style]]></Parameter>
+  <Parameter name="name"><![CDATA[Pindex Monochrome]]></Parameter>
   <Parameter name="source"><![CDATA[mapbox:///h4rrison.aa0364db,mapbox.mapbox-terrain-v1,mapbox.mapbox-streets-v5]]></Parameter>
 </Parameters>
 

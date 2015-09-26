@@ -16,9 +16,16 @@
 // Testing
 @f00: #f00;
 
-#bounding-box::bottom {
+#10m-900913-bounding-box::bottom[zoom<=8] {
     polygon-fill: @water;
-    comp-op: hard-light;
+}
+
+#10m-900913-bounding-box::bottom[zoom>8] {
+  polygon-fill: @land;
+}
+
+#water[zoom>8] {
+  polygon-fill: @water;
 }
 
 // ---------------------------------------------------------------------

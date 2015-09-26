@@ -10,8 +10,7 @@
 @pink: #f3c1d3;
 
 // Tint Bands
-#countries-natural-earth::tint-bands[zoom<=10], 
-#states-natural-earth::tint-bands[zoom>4][zoom<=10]
+#Countries::tint-bands[zoom<=8]
 {
   opacity: 0.2;
   line-join: round;
@@ -25,14 +24,9 @@
   [zoom=5] { line-width: 5; }
   [zoom=6] { line-width: 5; }
   [zoom>6] { line-width: 5; }
-  
-  // Turn off for countries when states are displayed
-  [ADM0_A3='USA'][zoom>4] { line-width: 0; }
-  [ADM0_A3='AUS'][zoom>4] { line-width: 0; }
 }
 
-#countries-natural-earth::inner[zoom>=0][zoom<=10],
-#states-natural-earth::inner[zoom>4][zoom<=10]
+#Countries::inner[zoom<=8]
 { 
   line-color:@line;
   line-opacity:0.8;
@@ -42,77 +36,9 @@
   [zoom=1] { line-width:1.6; }
   [zoom=2] { line-width:3; }
   [zoom>2] { line-width:2.4; }
-  
-  // Turn off for countries when states are displayed
-  [ADM0_A3='USA'][zoom>4] { line-width: 0; }
-  [ADM0_A3='AUS'][zoom>4] { line-width: 0; }
 }
 
-#states-natural-earth::fill[zoom>4][zoom<=10] {
-  polygon-comp-op: hard-light;
-  // Australia
-  [adm1_code='AUS-2651'] { polygon-fill: @red; }
-  [adm1_code='AUS-2650'] { polygon-fill: @yellow; }
-  [adm1_code='AUS-2655'] { polygon-fill: @purple; }
-  [adm1_code='AUS-2657'] { polygon-fill: @turquoise; }
-  [adm1_code='AUS-2654'] { polygon-fill: @blue; }
-  [adm1_code='AUS-2656'] { polygon-fill: @pink; }
-  [adm1_code='AUS-2653'] { polygon-fill: @red; }
-  [adm1_code='AUS-2660'] { polygon-fill: @yellow; }
-  // United States
-  [adm1_code='USA-3563'] { polygon-fill: @red; } //Alaska
-  [adm1_code='USA-3519'] { polygon-fill: @red; } //Washinngton
-  [adm1_code='USA-3525'] { polygon-fill: @orange; } //Oregon
-  [adm1_code='USA-3518'] { polygon-fill: @yellow; } //Idaho
-  [adm1_code='USA-3515'] { polygon-fill: @blue; } //Montana
-  [adm1_code='USA-3527'] { polygon-fill: @purple; } //Wyoming
-  [adm1_code='USA-3521'] { polygon-fill: @red; } //California
-  [adm1_code='USA-3523'] { polygon-fill: @green; } //Nevada
-  [adm1_code='USA-3520'] { polygon-fill: @pink; } //Arizona
-  [adm1_code='USA-3526'] { polygon-fill: @blue; } //Utah
-  [adm1_code='USA-3516'] { polygon-fill: @red; } //North Dakota
-  [adm1_code='USA-3534'] { polygon-fill: @yellow; } //South Dakota
-  [adm1_code='USA-3532'] { polygon-fill: @blue; } //Nebraska
-  [adm1_code='USA-3522'] { polygon-fill: @yellow; } //Colorado
-  [adm1_code='USA-3524'] { polygon-fill: @orange; } //New Mexico
-  [adm1_code='USA-3536'] { polygon-fill: @red; } //Texas
-  [adm1_code='USA-3533'] { polygon-fill: @turquoise; } //Oklahoma
-  [adm1_code='USA-3530'] { polygon-fill: @orange; } //Kansas
-  [adm1_code='USA-3514'] { polygon-fill: @blue; } //Minnesota
-  [adm1_code='USA-3529'] { polygon-fill: @pink; } //Iowa
-  [adm1_code='USA-3531'] { polygon-fill: @yellow; } //Missouri
-  [adm1_code='USA-3528'] { polygon-fill: @pink; } //Arkansas
-  [adm1_code='USA-3553'] { polygon-fill: @yellow; } //Wisconsin
-  [adm1_code='USA-3546'] { polygon-fill: @green; } //Illinois
-  [adm1_code='USA-3535'] { polygon-fill: @green; } //Louisiana
-  [adm1_code='USA-3562'] { polygon-fill: @red; } //Michigan
-  [adm1_code='USA-3547'] { polygon-fill: @yellow; } //Indiana
-  [adm1_code='USA-3550'] { polygon-fill: @green; } //Ohio
-  [adm1_code='USA-3548'] { polygon-fill: @orange; } //Kentucky
-  [adm1_code='USA-3551'] { polygon-fill: @green; } //Tennessee
-  [adm1_code='USA-3544'] { polygon-fill: @yellow; } //Mississippi
-  [adm1_code='USA-3541'] { polygon-fill: @red; } //Alabama
-  [adm1_code='USA-3543'] { polygon-fill: @orange; } //Georgia
-  [adm1_code='USA-3542'] { polygon-fill: @yellow; } //Florida
-  [adm1_code='USA-3545'] { polygon-fill: @pink; } //South Carolina
-  [adm1_code='USA-3549'] { polygon-fill: @red; } //North Carolina
-  [adm1_code='USA-3552'] { polygon-fill: @yellow; } //Virginia
-  [adm1_code='USA-3554'] { polygon-fill: @pink; } //West Virginia
-  [adm1_code='USA-3560'] { polygon-fill: @orange; } //Pensylvania
-  [adm1_code='USA-3557'] { polygon-fill: @turquoise; } //Maryland
-  [adm1_code='USA-3555'] { polygon-fill: @blue; } //Delaware
-  [adm1_code='USA-3558'] { polygon-fill: @red; } //New Jersey
-  [adm1_code='USA-3559'] { polygon-fill: @blue; } //New York
-  [adm1_code='USA-3537'] { polygon-fill: @yellow; } //Connecticut
-  [adm1_code='USA-3513'] { polygon-fill: @green; } //Massachusetts
-  [adm1_code='USA-3540'] { polygon-fill: @turquoise; } //Vermont
-  [adm1_code='USA-3538'] { polygon-fill: @yellow; } //New Hampshire
-  [adm1_code='USA-3539'] { polygon-fill: @pink; } //Rhode Island
-  [adm1_code='USA-3561'] { polygon-fill: @red; } //Maine
-  [adm1_code='USA-3517'] { polygon-fill: @red; } //Hawaii
-}
-
-#countries-natural-earth::fill[zoom<=10] {
+#Countries::fill[zoom<=8] {
   polygon-comp-op: hard-light;
   [ADM0_A3='ABW'] { polygon-fill:@purple; }
   [ADM0_A3='AFG'] { polygon-fill:@red; }
@@ -129,8 +55,7 @@
   [ADM0_A3='ATC'] { polygon-fill:@purple; }
   [ADM0_A3='ATF'] { polygon-fill:@yellow; }
   [ADM0_A3='ATG'] { polygon-fill:@pink; }
-  [ADM0_A3='AUS'][zoom<5] {
-    // Set no fill when displaying states
+  [ADM0_A3='AUS'] {
     polygon-fill:@pink; 
   }
   [ADM0_A3='AUT'] { polygon-fill:@turquoise; }
@@ -351,7 +276,7 @@
   [ADM0_A3='UKR'] { polygon-fill:@pink; }
   [ADM0_A3='UMI'] { polygon-fill:@yellow; }
   [ADM0_A3='URY'] { polygon-fill:@red; }
-  [ADM0_A3='USA'][zoom<5] { 
+  [ADM0_A3='USA'] { 
     polygon-fill:@yellow;
   }
   [ADM0_A3='USG'] { polygon-fill:@yellow; }

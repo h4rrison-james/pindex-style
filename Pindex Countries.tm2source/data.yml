@@ -1,0 +1,44 @@
+_prefs: 
+  disabled: []
+  inspector: false
+  mapid: h4rrison.961cdfc3
+  rev: s-6aea789d
+  saveCenter: true
+attribution: ''
+center: 
+  - -71.3672
+  - 44.2767
+  - 3
+description: ''
+Layer: 
+  - id: Countries
+    Datasource: 
+      file: /Users/Harrison/Dropbox/Coding/Pindex/Cartography/Custom Shapefiles/Countries.shp
+      type: shape
+    description: Countries
+    fields: 
+      ABBREV: String
+      ADM0_A3: String
+      ADMIN: String
+      CONTINENT: String
+      LABELRANK: Number
+      MAPCOLOR13: Number
+      MAPCOLOR7: Number
+      MAPCOLOR8: Number
+      MAPCOLOR9: Number
+      NAME: String
+      NAME_LONG: String
+      POSTAL: String
+      REGION_UN: String
+      REGION_WB: String
+      scalerank: Number
+      SOVEREIGNT: String
+      SU_A3: String
+      SUBREGION: String
+      SUBUNIT: String
+    properties: 
+      "buffer-size": 8
+    srs: +proj=longlat +ellps=WGS84 +datum=WGS84 +no_defs
+maxzoom: 7
+minzoom: 0
+name: Pindex Countries
